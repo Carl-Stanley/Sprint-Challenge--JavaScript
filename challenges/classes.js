@@ -1,6 +1,7 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 
-/*
+/* Original Function and prototypes 
+
 function CuboidMaker(object) {
     this.length = object.length;
     this.width  = object.width;
@@ -50,3 +51,32 @@ const cuboid = new CuboidMaker({
  console.log(cuboid.surfaceArea()); // 130
 
 // Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
+
+// Trying the stretch. 
+
+// https://www.wikihow.com/Find-the-Surface-Area-of-a-Cube
+
+class CubeMaker extends CuboidMaker {
+    constructor(theCube) {
+        super(theCube);
+    }
+    anotherVolumeMaker () {
+        return this.height * this.width * this.length;
+    };
+    cubeSurfaceArea () {
+        
+        if((this.length = this.width) & (this.width = this.height) ){
+
+            var surfaceA = 0; 
+            
+            surfaceA = this.length * this.widthwidth * 6;
+
+            return (`Cube surface area is ${surfaceA}`);
+            
+            } else {
+                  
+                return "This is not a cube. One side is longer that the others.";
+            }
+    };
+
+};
