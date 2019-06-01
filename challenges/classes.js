@@ -65,18 +65,28 @@ class CubeMaker extends CuboidMaker {
     };
     cubeSurfaceArea () {
         
-        if((this.length = this.width) & (this.width = this.height) ){
+        if((this.length = this.width) || (this.width = this.height) ){
 
             var surfaceA = 0; 
             
-            surfaceA = this.length * this.widthwidth * 6;
+            surfaceA = this.length * this.width * 6;
 
             return (`Cube surface area is ${surfaceA}`);
-            
-            } else {
+
+            } else { // This part does not work. A cube has three equal dimension, L/W/H. Checking that all dimensions are congruent does not work. 
                   
                 return "This is not a cube. One side is longer that the others.";
             }
     };
 
 };
+
+const aCube = new CubeMaker({
+    width: 4,
+    height: 4,
+    length: 4 
+ });
+
+console.log(aCube.cubeSurfaceArea());
+
+
