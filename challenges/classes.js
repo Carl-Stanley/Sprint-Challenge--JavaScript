@@ -69,12 +69,7 @@ class CubeMaker extends CuboidMaker {
         
         // Check first to confirm all dimensions are congruent. 
         // https://www.mathopenref.com/cube.html
-        /*
-
-        Cube
-        Definition: A solid with six congruent square faces. A regular hexahedron.
-
-        */
+        
         if((this.length == this.width) && (this.width == this.height )) {
 
             var surfaceA = 0; 
@@ -84,7 +79,7 @@ class CubeMaker extends CuboidMaker {
             return (`Cube surface area is ${surfaceA}`);
 
             } else {
-                  // If one dimension is different than the others, it's not a cube bro. 
+                  // If one dimension is different than the others, it's not a cube. 
                 return "This is not a cube. One side is longer that the others. Consult your owner's manual on cubes";
             }
     };
