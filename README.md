@@ -34,12 +34,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. What is the difference between a function and a method?
 
+   Methods are functions within an object. Functions are routines or methods themselves. 
+
 3. What is closure?
+
+    The ability of a function to access a piece of data or a function outside of scope (outside of the function). 
 
 4. Describe the four rules of the 'this' keyword.
 
-5. Why do we need super() in an extended class?
+    1: Window/Global Object Binding
 
+        Global window, this is the window(window/console Object). 
+
+    2: Implicit Binding 
+
+        A function when called by a preceding dot, means the referring object before that dot is this.
+
+    3: New binding 
+
+        This is referring to the specific instance of the object that is created and returned by the constructor function.
+
+    4: Explicit binding 
+
+        Whenever JavaScript’s call, apply, or bind method is used, this is explicitly defined.
+
+5. Why do we need super() in an extended class?
+    
+    When we extend a class, to extend propteries of the class you must use super() to link those properties between the parent and child classes.
+    
 ## Project Set up
 
 Follow these steps to set up and work on your project:
