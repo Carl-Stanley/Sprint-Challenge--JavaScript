@@ -65,7 +65,15 @@ class CubeMaker extends CuboidMaker {
     };
     cubeSurfaceArea () {
         
-        if((this.length = this.width) || (this.width = this.height) ){
+        // Check first to confirm all dimensions are congruent. 
+        // https://www.mathopenref.com/cube.html
+        /*
+
+        Cube
+        Definition: A solid with six congruent square faces. A regular hexahedron.
+
+        */
+        if((this.length == this.width) && (this.width == this.height )) {
 
             var surfaceA = 0; 
             
@@ -73,9 +81,9 @@ class CubeMaker extends CuboidMaker {
 
             return (`Cube surface area is ${surfaceA}`);
 
-            } else { // This part does not work. A cube has three equal dimension, L/W/H. Checking that all dimensions are congruent does not work. 
-                  
-                return "This is not a cube. One side is longer that the others.";
+            } else {
+                  // If one dimension is different than the others, it's not a cube bro. 
+                return "This is not a cube. One side is longer that the others. Consult your owner's manual on cubes";
             }
     };
 
@@ -87,6 +95,14 @@ const aCube = new CubeMaker({
     length: 4 
  });
 
-console.log(aCube.cubeSurfaceArea());
+ const aCube2 = new CubeMaker({
+    width: 4,
+    height: 5,
+    length: 4 
+ });
 
+
+
+console.log(aCube.cubeSurfaceArea());
+console.log(aCube2.cubeSurfaceArea());
 
